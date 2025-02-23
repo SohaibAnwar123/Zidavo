@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zidavo</title>
+    <!-- link css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- navbar start  -->
+    <header class="navbar_wrap">
+        <div class="container">
+            <div class="nav_inner">
+                <!-- nav-toggler for mobile version only -->
+                <button class="nav-toggler">
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="">Dashboard</a></li>
+                    <li><a href="" class="active">Calculators</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">My Stats</a></li>
+                    <li><a href="">My News</a></li>
+                    <li><a href="">My Goals</a></li>
+                    <li><a href="">Refer a Friend</a></li>
+                    <li><a href="">Interact (F)</a></li>
+                    <li><a href="">Resources</a></li>
+                </ul>
+
+                <div class="notify_wrap">
+                    <div class="img_wrap">
+                        <a href=""><img src="assets/img/notify_img.svg" alt=""></a>
+                    </div>
+                    <div class="img_wrap">
+                        <a href=""><img src="assets/img/propile_img.svg" alt=""></a>
+                    </div>
+                    <div class="drop-down">
+                        <div class="selected">
+                            <a><img src="assets/img/ham_burger.svg" alt=""></a>
+                        </div>
+                        <div class="options">
+                            <ul class="options_ul">
+                                <li><a href="">My Profile</a></li>
+                                <li><a href="" class="active">Orders</a></li>
+                                <li><a href="">Payments</a></li>
+                                <li><a href="">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- navbar end  -->
+    <!-- order history wrap start -->
+    <section class="order_detail order__detail">
+        <div class="container">
+            <div class="order_content flex_bt position_relative">
+                <h4>Order Details</h4>
+                <div class="sort_date">
+                    <div class="drop-down2 d_flex">
+                        <p class="">Sort by: <span>Order ID</span></p>
+                        <div class="selected2">
+                            <a><img src="assets/img/drop_down.svg" alt=""></a>
+                        </div>
+                        <div class="options2">
+                            <ul class="options_ul">
+                                <li><a href="">My Profile</a></li>
+                                <li><a href="">Orders</a></li>
+                                <li><a href="">Payments</a></li>
+                                <li><a href="">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="drop-down3 d_flex">
+                        <p class="">Filter: <span>Date</span></p>
+                        <div class="selected3">
+                            <a><img src="assets/img/drop_down.svg" alt=""></a>
+                        </div>
+                        <div class="options3">
+                            <ul class="options_ul">
+                                <li><a href="">My Profile</a></li>
+                                <li><a href="">Orders</a></li>
+                                <li><a href="">Payments</a></li>
+                                <li><a href="">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order_table" >
+                <table >
+                    <thead>
+                        <tr>
+                            <th scope="col"><input type="checkbox">ORDER</th>
+                            <th scope="col">DATE</th>
+                            <th scope="col">CITY</th>
+                            <th scope="col">PAYMENT STATUS</th>
+                            <th scope="col">ORDER STATUS</th>
+                            <th scope="col">TOTAL</th>
+                            <th scope="col">ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg_white">
+                            <td><input type="checkbox"><span class="cle_red">#3456</span></td>
+                            <td><span class="date_span">10 MAY 2022 11:12PM</span></td>
+                            <td>New Delhi</td>
+                            <td>Prepaid</td>
+                            <td><a href="" class="order_status order_green flex_align">DELIVERED</a></td>
+                            <td>INR 1200</td>
+                            <td>
+                                <div class="btnz_wrap">
+                                    <a href="" class="view_cancel flex_align bg_black">VIEW</a>
+                                    <a href="" class="view_cancel flex_align bg_red">CANCEL</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="bg_white">
+                            <td><input type="checkbox"><span class="cle_red">#3456</span></td>
+                            <td><span class="date_span">10 MAY 2022 11:12PM</span></td>
+                            <td>New Delhi</td>
+                            <td>Cash on Delivery</td>
+                            <td><a href="" class="order_status order_orange flex_align">WAITING</a></td>
+                            <td>INR 1200</td>
+                            <td>
+                                <div class="btnz_wrap">
+                                    <a href="" class="view_cancel flex_align bg_black">VIEW</a>
+                                    <a href="" class="view_cancel flex_align bg_red">CANCEL</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="bg_white">
+                            <td><input type="checkbox"><span class="cle_red">#3456</span></td>
+                            <td><span class="date_span">10 MAY 2022 11:12PM</span></td>
+                            <td>New Delhi</td>
+                            <td>Cash on Delivery</td>
+                            <td><a href="" class="order_status order_purple flex_align">REFUNDED</a></td>
+                            <td>INR 1200</td>
+                            <td>
+                                <div class="btnz_wrap">
+                                    <a href="" class="view_cancel flex_align bg_black">VIEW</a>
+                                    <a href="" class="view_cancel flex_align bg_red">CANCEL</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="bg_white">
+                            <td><input type="checkbox"><span class="cle_red">#3456</span></td>
+                            <td><span class="date_span">10 MAY 2022 11:12PM</span></td>
+                            <td>New Delhi</td>
+                            <td>Cash on Delivery</td>
+                            <td><a href="" class="order_status order_red flex_align">CANCELLED</a></td>
+                            <td>INR 1200</td>
+                            <td>
+                                <div class="btnz_wrap">
+                                    <a href="" class="view_cancel flex_align bg_black">VIEW</a>
+                                    <a href="" class="view_cancel flex_align bg_red">CANCEL</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- order history end -->
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    //TOGGLING NESTED ul
+    $(".drop-down .selected a").click(function () {
+        $(".drop-down .options ul").toggle();
+        // $(".drop-down .options ul").css("z-index" ,"999999999999");
+    });
+
+    //SELECT OPTIONS AND HIDE OPTION AFTER SELECTION
+    $(".drop-down .options ul li a").click(function () {
+        var text = $(this).html();
+        $(".drop-down .selected a span").html(text);
+        $(".drop-down .options ul").hide();
+    });
+
+
+    //HIDE OPTIONS IF CLICKED ANYWHERE ELSE ON PAGE
+    $(document).bind('click', function (e) {
+        var $clicked = $(e.target);
+        if (!$clicked.parents().hasClass("drop-down"))
+            $(".drop-down .options ul").hide();
+    });
+</script>
+
+<script>
+    //TOGGLING NESTED ul
+    $(".drop-down2 .selected2 a").click(function () {
+        $(".drop-down2 .options2 ul").toggle();
+        // $(".drop-down2 .options2 ul").css("z-index" ,"9999");
+    });
+
+    //SELECT OPTIONS AND HIDE OPTION AFTER SELECTION
+    $(".drop-down2 .options2 ul li a").click(function () {
+        var text = $(this).html();
+        $(".drop-down2 .selected2 a span").html(text);
+        $(".drop-down2 .options2 ul").hide();
+    });
+
+
+    //HIDE OPTIONS IF CLICKED ANYWHERE ELSE ON PAGE
+    $(document).bind('click', function (e) {
+        var $clicked = $(e.target);
+        if (!$clicked.parents().hasClass("drop-down2"))
+            $(".drop-down2 .options2 ul").hide();
+    });
+</script>
+<!-- custome mobile navbar toogle start  -->
+<script>
+    //TOGGLING NESTED ul
+    $(".drop-down3 .selected3 a").click(function () {
+        $(".drop-down3 .options3 ul").toggle();
+        // $(".drop-down3 .options3 ul").css("z-index" ,"999");
+    });
+
+    //SELECT OPTIONS AND HIDE OPTION AFTER SELECTION
+    $(".drop-down3 .options3 ul li a").click(function () {
+        var text = $(this).html();
+        $(".drop-down3 .selected3 a span").html(text);
+        $(".drop-down3 .options3 ul").hide();
+       
+    });
+
+
+    //HIDE OPTIONS IF CLICKED ANYWHERE ELSE ON PAGE
+    $(document).bind('click', function (e) {
+        var $clicked = $(e.target);
+        if (!$clicked.parents().hasClass("drop-down3"))
+            $(".drop-down3 .options3 ul").hide();
+    });
+</script>
+<!-- custome mobile navbar toogle start  -->
+<script>
+    // define all UI variable
+    const navToggler = document.querySelector('.nav-toggler');
+    const navMenu = document.querySelector('.nav_inner ul');
+    const navLinks = document.querySelectorAll('.nav_inner a');
+
+    // load all event listners
+    allEventListners();
+
+    // functions of all event listners
+    function allEventListners() {
+        // toggler icon click event
+        navToggler.addEventListener('click', togglerClick);
+        // nav links click event
+        navLinks.forEach(elem => elem.addEventListener('click', navLinkClick));
+    }
+
+    // togglerClick function
+    function togglerClick() {
+        navToggler.classList.toggle('toggler-open');
+        navMenu.classList.toggle('open');
+    }
+
+    // navLinkClick function
+    function navLinkClick() {
+        if (navMenu.classList.contains('open')) {
+            navToggler.click();
+        }
+    }
+</script>
+<!-- custome mobile navbar toogle end -->
+
+</html>

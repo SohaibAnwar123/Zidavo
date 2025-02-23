@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zidavo</title>
+    <!-- link css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- navbar start  -->
+    <header class="navbar_wrap">
+        <div class="container">
+            <div class="nav_inner">
+                <!-- nav-toggler for mobile version only -->
+                <button class="nav-toggler">
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="">Dashboard</a></li>
+                    <li><a href="" class="active">Calculators</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">My Stats</a></li>
+                    <li><a href="">My News</a></li>
+                    <li><a href="">My Goals</a></li>
+                    <li><a href="">Refer a Friend</a></li>
+                    <li><a href="">Interact (F)</a></li>
+                    <li><a href="">Resources</a></li>
+                </ul>
+
+                <div class="notify_wrap">
+                    <div class="img_wrap">
+                        <a href=""><img src="assets/img/notify_img.svg" alt=""></a>
+                    </div>
+                    <div class="img_wrap">
+                        <a href=""><img src="assets/img/propile_img.svg" alt=""></a>
+                    </div>
+                    <div class="drop-down">
+                        <div class="selected">
+                            <a><img src="assets/img/ham_burger.svg" alt=""></a>
+                        </div>
+                        <div class="options">
+                            <ul class="options_ul">
+                                <li><a href="">My Profile</a></li>
+                                <li><a href="" class="active">Orders</a></li>
+                                <li><a href="">Payments</a></li>
+                                <li><a href="">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- navbar end  -->
+    <!-- edit profile sec start  -->
+    <section class="edit_profile fat_intake_main bmi_main">
+        <div class="container">
+            <h1 class="profile_title text_center">Check Your BMI</h1>
+            <div class="fat_wrap">
+                <div class="fat_inner">
+                    <div class="fat_input max_width_100">
+                        <input type="text" placeholder="Put your weight in here (KG)">
+                    </div>
+                    <div class="fat_input max_width_100">
+                        <input type="text" placeholder="And your height in here (CM)">
+                    </div>
+                </div>
+                <a href="" class="edit_btn flex_align mx_auto">CALCULATE BMI</a>
+            </div>
+            <div class="fat_result">
+                <h3>Your BMI Is <span>21.87</span> Which Means You Are Normal</h3>
+                <div class="fat_calculation">
+                    <div class="calc_inner calc__inner">
+                        <h5>BMI</h5>
+                        <h6>less than 18.5:
+                        </h6>
+                        <h6>18.5 - 24.9:</h6>
+                        <h6>25 - 29.9:</h6>
+                        <h6>30 - 34.9:</h6>
+                        <h6>35 - 39.9:</h6>
+                        <h6>40 upwards:</h6>
+                    </div>
+                    <div class="calc_inner calc__inner">
+                        <h5>CLASSIFICATION</h5>
+                        <h6>Underweight</h6>
+                        <h6>Normal weight</h6>
+                        <h6>Overweight</h6>
+                        <h6>Class I Obese</h6>
+                        <h6>Class II Obese</h6>
+                        <h6>Class III Obese</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- edit profile sec end  -->
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    //TOGGLING NESTED ul
+    $(".drop-down .selected a").click(function () {
+        $(".drop-down .options ul").toggle();
+    });
+
+    //SELECT OPTIONS AND HIDE OPTION AFTER SELECTION
+    $(".drop-down .options ul li a").click(function () {
+        var text = $(this).html();
+        $(".drop-down .selected a span").html(text);
+        $(".drop-down .options ul").hide();
+    });
+
+
+    //HIDE OPTIONS IF CLICKED ANYWHERE ELSE ON PAGE
+    $(document).bind('click', function (e) {
+        var $clicked = $(e.target);
+        if (!$clicked.parents().hasClass("drop-down"))
+            $(".drop-down .options ul").hide();
+    });
+</script>
+
+<script>
+    // fat body
+    $(".drop_down_fat .selected a").click(function () {
+        $(".drop_down_fat .options ul").toggle();
+    });
+
+    //SELECT OPTIONS AND HIDE OPTION AFTER SELECTION
+    $(".drop_down_fat .options ul li a").click(function () {
+        var text = $(this).html();
+        $(".drop_down_fat .selected a span").html(text);
+        $(".drop_down_fat .options ul").hide();
+    });
+
+
+    //HIDE OPTIONS IF CLICKED ANYWHERE ELSE ON PAGE
+    $(document).bind('click', function (e) {
+        var $clicked = $(e.target);
+        if (!$clicked.parents().hasClass("drop_down_fat"))
+            $(".drop_down_fat .options ul").hide();
+    });
+</script>
+<script>
+    // sex drop
+    $(".drop_down_sex .selected a").click(function () {
+        $(".drop_down_sex .options ul").toggle();
+    });
+
+    //SELECT OPTIONS AND HIDE OPTION AFTER SELECTION
+    $(".drop_down_sex .options ul li a").click(function () {
+        var text = $(this).html();
+        $(".drop_down_sex .selected a span").html(text);
+        $(".drop_down_sex .options ul").hide();
+    });
+
+
+    //HIDE OPTIONS IF CLICKED ANYWHERE ELSE ON PAGE
+    $(document).bind('click', function (e) {
+        var $clicked = $(e.target);
+        if (!$clicked.parents().hasClass("drop_down_fat"))
+            $(".drop_down_fat .options ul").hide();
+    });
+</script>
+<script>
+    // activity drop
+    $(".drop_down_activity .selected a").click(function () {
+        $(".drop_down_activity .options ul").toggle();
+    });
+
+    //SELECT OPTIONS AND HIDE OPTION AFTER SELECTION
+    $(".drop_down_activity .options ul li a").click(function () {
+        var text = $(this).html();
+        $(".drop_down_activity .selected a span").html(text);
+        $(".drop_down_activity .options ul").hide();
+    });
+
+
+    //HIDE OPTIONS IF CLICKED ANYWHERE ELSE ON PAGE
+    $(document).bind('click', function (e) {
+        var $clicked = $(e.target);
+        if (!$clicked.parents().hasClass("drop_down_fat"))
+            $(".drop_down_fat .options ul").hide();
+    });
+</script>
+
+<!-- custome mobile navbar toogle start  -->
+<script>
+    // define all UI variable
+    const navToggler = document.querySelector('.nav-toggler');
+    const navMenu = document.querySelector('.nav_inner ul');
+    const navLinks = document.querySelectorAll('.nav_inner a');
+
+    // load all event listners
+    allEventListners();
+
+    // functions of all event listners
+    function allEventListners() {
+        // toggler icon click event
+        navToggler.addEventListener('click', togglerClick);
+        // nav links click event
+        navLinks.forEach(elem => elem.addEventListener('click', navLinkClick));
+    }
+
+    // togglerClick function
+    function togglerClick() {
+        navToggler.classList.toggle('toggler-open');
+        navMenu.classList.toggle('open');
+    }
+
+    // navLinkClick function
+    function navLinkClick() {
+        if (navMenu.classList.contains('open')) {
+            navToggler.click();
+        }
+    }
+</script>
+<!-- custome mobile navbar toogle end -->
+
+</html>

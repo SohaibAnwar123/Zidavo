@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zidavo</title>
+    <!-- link css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- navbar start  -->
+    <header class="navbar_wrap">
+        <div class="container">
+            <div class="nav_inner">
+                <!-- nav-toggler for mobile version only -->
+                <button class="nav-toggler">
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="">Dashboard</a></li>
+                    <li><a href="" class="active">Calculators</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">My Stats</a></li>
+                    <li><a href="">My News</a></li>
+                    <li><a href="">My Goals</a></li>
+                    <li><a href="">Refer a Friend</a></li>
+                    <li><a href="">Interact (F)</a></li>
+                    <li><a href="">Resources</a></li>
+                </ul>
+
+                <div class="notify_wrap">
+                    <div class="img_wrap">
+                        <a href=""><img src="assets/img/notify_img.svg" alt=""></a>
+                    </div>
+                    <div class="img_wrap">
+                        <a href=""><img src="assets/img/propile_img.svg" alt=""></a>
+                    </div>
+                    <div class="drop-down">
+                        <div class="selected">
+                            <a><img src="assets/img/ham_burger.svg" alt=""></a>
+                        </div>
+                        <div class="options">
+                            <ul class="options_ul">
+                                <li><a href="">My Profile</a></li>
+                                <li><a href="" class="active">Orders</a></li>
+                                <li><a href="">Payments</a></li>
+                                <li><a href="">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- navbar end  -->
+    <!-- edit profile sec start  -->
+    <section class="edit_profile">
+        <div class="container">
+            <h1 class="profile_title">Edit Your Profile</h1>
+            <div class="edit_inner">
+                <div class="profile_img">
+                    <a href=""><img src="assets/img/profile_edit.svg" alt=""></a>
+                    <div class="edit_icon">
+                        <a href=""><img src="assets/img/edit_icon.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="edit_content">
+                    <div class="input_wrap">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" placeholder="Amrita">
+                    </div>
+                    <div class="input_wrap">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" placeholder="Saini">
+                    </div>
+                    <div class="input_wrap">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="amritasaini@gmail.com">
+                    </div>
+                    <div class="input_wrap">
+                        <label for="number">Phone:</label>
+                        <input type="text" id="number" placeholder="123 450 7890">
+                    </div>
+                    <div class="input_wrap">
+                        <label for="new_password">Change Password:</label>
+                        <input type="password" id="new_password" placeholder="New Password">
+                    </div>
+                    <div class="input_wrap">
+                        <label for="confirm_password">Confirm:</label>
+                        <input type="password" id="confirm_password" placeholder="Confirm Password">
+                    </div>
+                    <div class="input_wrap">
+                        <label for="height">Height:</label>
+                        <input type="text" id="height" placeholder="160 cm">
+                    </div>
+                    <div class="input_wrap">
+                        <label for="Weight">Weight:</label>
+                        <input type="text" id="weight" placeholder="60 kg">
+                    </div>
+                    <div class="input_wrap max_width_100">
+                        <label for="Address">Address:</label>
+                        <input type="text" id="Address" placeholder="123, xyz Street , New Delhi, 122019">
+                    </div>
+                    <div class="input_wrap">
+                        <label for="birth">Date of Birth:</label>
+                        <div class="birth_date">
+                            <input type="number" id="birth" placeholder="15">
+                            <input type="number" id="birth" placeholder="May">
+                            <input type="number" id="birth" placeholder="1992">
+                        </div>
+                    </div>
+                    <div class="input_wrap max_width_100">
+                        <label for="birth">Your Interest:</label>
+                        <div class="birth_date">
+                            <input type="checkbox" class="check_input"><label>Fitness</label>
+                            <input type="checkbox" class="check_input"><label>Cricket</label>
+                            <input type="checkbox" class="check_input"><label>Bollywood</label>
+                            <input type="checkbox" class="check_input"><label>Music</label>
+                            <input type="checkbox" class="check_input"><label>Yoga</label>
+                            <input type="checkbox" class="check_input"><label>Astrology</label>
+                        </div>
+                    </div>
+                    <div class="save_cancel">
+                        <a href="" class="save_btn flex_align">SAVE CHANGES</a>
+                        <a href="" class="cencel_btn flex_align">CANCEL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- edit profile sec end  -->
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    //TOGGLING NESTED ul
+    $(".drop-down .selected a").click(function () {
+        $(".drop-down .options ul").toggle();
+    });
+
+    //SELECT OPTIONS AND HIDE OPTION AFTER SELECTION
+    $(".drop-down .options ul li a").click(function () {
+        var text = $(this).html();
+        $(".drop-down .selected a span").html(text);
+        $(".drop-down .options ul").hide();
+    });
+
+
+    //HIDE OPTIONS IF CLICKED ANYWHERE ELSE ON PAGE
+    $(document).bind('click', function (e) {
+        var $clicked = $(e.target);
+        if (!$clicked.parents().hasClass("drop-down"))
+            $(".drop-down .options ul").hide();
+    });
+</script>
+<!-- custome mobile navbar toogle start  -->
+<script>
+    // define all UI variable
+    const navToggler = document.querySelector('.nav-toggler');
+    const navMenu = document.querySelector('.nav_inner ul');
+    const navLinks = document.querySelectorAll('.nav_inner a');
+
+    // load all event listners
+    allEventListners();
+
+    // functions of all event listners
+    function allEventListners() {
+        // toggler icon click event
+        navToggler.addEventListener('click', togglerClick);
+        // nav links click event
+        navLinks.forEach(elem => elem.addEventListener('click', navLinkClick));
+    }
+
+    // togglerClick function
+    function togglerClick() {
+        navToggler.classList.toggle('toggler-open');
+        navMenu.classList.toggle('open');
+    }
+
+    // navLinkClick function
+    function navLinkClick() {
+        if (navMenu.classList.contains('open')) {
+            navToggler.click();
+        }
+    }
+</script>
+<!-- custome mobile navbar toogle end -->
+
+</html>

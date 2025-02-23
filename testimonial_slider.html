@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6e565221c4.js" crossorigin="anonymous"></script>
+    <title>Zidavo</title>
+    <!-- link slick css  -->
+    <link rel="stylesheet" href="assets/css/slick.min.css" />
+    <link rel="stylesheet" href="assets/css/slick-theme.min.css" />
+    <!-- link css  -->
+    <link rel="stylesheet" href="assets/css/testimonial.css">
+</head>
+
+<body>
+
+    <section class="testimonial_wrap">
+        <div class="container">
+            <h3 class="our_clients">Our clients’</h3>
+            <h4 class="our_test">TESTIMONIALS</h4>
+            <!-- slick slider start here  -->
+            <div class="testimonial_slick">
+                <div class="testimonal_box">
+                    <div class="feature_img">
+                        <img src="assets/img/testimonial/testimonial_1.png" alt="">
+                    </div>
+                    <div class="testimonial_content">
+                        <div class="stars_wrap">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                        </div>
+                        <p class="testimonial_detail">
+                            I feel so fortunate to have worked with incredible experts in the fields of health,
+                            mindfulness and training, so I thought, ‘Why not share that?’
+                        </p>
+                        <div class="signature">
+                            <img src="assets/img/testimonial/signature.png" alt="">
+                        </div>
+                        <h5>ROBERTA FLANNAGAN</h5>
+                        <h6>Personal workout</h6>
+                    </div>
+                </div>
+                <div class="testimonal_box">
+                    <div class="feature_img">
+                        <img src="assets/img/testimonial/testimonial_2.png" alt="">
+                    </div>
+                    <div class="testimonial_content">
+                        <div class="stars_wrap">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                        </div>
+                        <p class="testimonial_detail">
+                            We’ll start small then build, giving your body a to really what you’re doing,” says Sylvia.
+                            “Each class will be exciting, always moving you forward.
+                        </p>
+                        <div class="signature">
+                            <img src="assets/img/testimonial/signature.png" alt="">
+                        </div>
+                        <h5>SYLVIA RINSKY</h5>
+                        <h6>Personal climber</h6>
+                    </div>
+                </div>
+                <div class="testimonal_box">
+                    <div class="feature_img">
+                        <img src="assets/img/testimonial/testimonial_3.png" alt="">
+                    </div>
+                    <div class="testimonial_content">
+                        <div class="stars_wrap">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                        </div>
+                        <p class="testimonial_detail">
+                            I have never looked forward to a workout class before, your but this one I can’t wait to get
+                            to! Darren is great and music amazing!
+                        </p>
+                        <div class="signature">
+                            <img src="assets/img/testimonial/signature.png" alt="">
+                        </div>
+                        <h5>ROBERT MULLINGAN</h5>
+                        <h6>Personal workout</h6>
+                    </div>
+                </div>
+
+            </div>
+            <!-- slick end  -->
+        </div>
+    </section>
+</body>
+<script src="assets/js/jquery2-1-3.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.testimonial_slick').slick({
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            centerMode: false,
+            infinite: true,
+            fade: true,
+            dots: true,
+
+            nextArrow: '.red_border',
+            prevArrow: '.red_border',
+
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+
+            }, {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }]
+        });
+    });
+</script>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zidavo</title>
+    <!-- font awaosme  -->
+    <script src="https://kit.fontawesome.com/6e565221c4.js" crossorigin="anonymous"></script>
+    <!-- link css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- navbar start  -->
+    <header class="navbar_wrap">
+        <div class="container">
+            <div class="nav_inner">
+                <!-- nav-toggler for mobile version only -->
+                <button class="nav-toggler">
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="">Dashboard</a></li>
+                    <li><a href="" class="active">Calculators</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">My Stats</a></li>
+                    <li><a href="">My News</a></li>
+                    <li><a href="">My Goals</a></li>
+                    <li><a href="">Refer a Friend</a></li>
+                    <li><a href="">Interact (F)</a></li>
+                    <li><a href="">Resources</a></li>
+                </ul>
+
+                <div class="notify_wrap">
+                    <div class="img_wrap">
+                        <a href=""><img src="assets/img/notify_img.svg" alt=""></a>
+                    </div>
+                    <div class="img_wrap">
+                        <a href=""><img src="assets/img/propile_img.svg" alt=""></a>
+                    </div>
+                    <div class="drop-down">
+                        <div class="selected">
+                            <a><img src="assets/img/ham_burger.svg" alt=""></a>
+                        </div>
+                        <div class="options">
+                            <ul class="options_ul">
+                                <li><a href="">My Profile</a></li>
+                                <li><a href="" class="active">Orders</a></li>
+                                <li><a href="">Payments</a></li>
+                                <li><a href="">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- navbar end  -->
+    <section class="refer_friend">
+        <div class="container">
+            <div class="refer_inner">
+                <div class="refer_img">
+                    <img src="assets/img/refer_friend.svg" alt="">
+                </div>
+                <div class="refer_content">
+                    <h1>REFER A FRIEND</h1>
+                    <p>Give your friends <span>10% off</span> on their first order of <span>Rs.1000+</span> and get
+                        <span>Rs.50 off</span> for each successful referral. </p>
+                </div>
+            </div>
+            <div class="invite_friend">
+                <div class="gift_img text_center">
+                    <img src="assets/img/giftbox.svg" alt="">
+                </div>
+                <h3 class="reward_points text_center">Invite a Friend, you both get INR100</h3>
+                <p class="invite_detail">Each successful referral will earn you 3000 Ridavo and your friend ₹300 off on
+                    their first purchase! Please share your email below to get started.
+                </p>
+                <div class="step_indicator">
+                    <div class="dashed_border"></div>
+                    <div class="step_box">
+                        <h3 class="flex_align">1</h3>
+                        <p>Invite your friend</p>
+                    </div>
+                    <div class="step_box">
+                        <h3 class="flex_align">2</h3>
+                        <p>They register on our site</p>
+                    </div>
+                    <div class="step_box">
+                        <h3 class="flex_align">3</h3>
+                        <p>You earn points</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="send_invites">
+                <div class="input_wrap">
+                    <input type="text" placeholder="Enter email address to invite">
+                    <a href="" class="send_btn flex_align">SEND INVITES</a>
+                </div>
+                <p class="invite_detail text_center">More ways to invite your friends copy your unique link and share:</p>
+                <div class="input_wrap input__wrap">
+                    <input type="text" placeholder="https://ridavo.com/register/referral/69A3D5C13377FFF1C71AA9AC85A5C5B9">
+                    <a href="" class="send_btn send__btn flex_align"><img src="assets/img/copy_link.svg" alt=""> SEND INVITES</a>
+                </div>
+                <div class="share_this">
+                    <h4>Share this on:</h4>
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    //TOGGLING NESTED ul
+    $(".drop-down .selected a").click(function () {
+        $(".drop-down .options ul").toggle();
+    });
+
+    //SELECT OPTIONS AND HIDE OPTION AFTER SELECTION
+    $(".drop-down .options ul li a").click(function () {
+        var text = $(this).html();
+        $(".drop-down .selected a span").html(text);
+        $(".drop-down .options ul").hide();
+    });
+
+
+    //HIDE OPTIONS IF CLICKED ANYWHERE ELSE ON PAGE
+    $(document).bind('click', function (e) {
+        var $clicked = $(e.target);
+        if (!$clicked.parents().hasClass("drop-down"))
+            $(".drop-down .options ul").hide();
+    });
+</script>
+<!-- custome mobile navbar toogle start  -->
+<script>
+    // define all UI variable
+    const navToggler = document.querySelector('.nav-toggler');
+    const navMenu = document.querySelector('.nav_inner ul');
+    const navLinks = document.querySelectorAll('.nav_inner a');
+
+    // load all event listners
+    allEventListners();
+
+    // functions of all event listners
+    function allEventListners() {
+        // toggler icon click event
+        navToggler.addEventListener('click', togglerClick);
+        // nav links click event
+        navLinks.forEach(elem => elem.addEventListener('click', navLinkClick));
+    }
+
+    // togglerClick function
+    function togglerClick() {
+        navToggler.classList.toggle('toggler-open');
+        navMenu.classList.toggle('open');
+    }
+
+    // navLinkClick function
+    function navLinkClick() {
+        if (navMenu.classList.contains('open')) {
+            navToggler.click();
+        }
+    }
+</script>
+<!-- custome mobile navbar toogle end -->
+
+</html>
